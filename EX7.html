@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<html>
+    <head>
+        <title>WebLab Ex-7</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="jquery-3.3.1.min.js"></script>
+        <style>
+            body{
+                margin:0px;
+                padding:0px; 
+            }  
+            button{
+                margin-top:10px;
+                color:white;color: blue;
+                width:80px;float: left;
+                margin-left:20px;
+            }
+            #banner{
+                width:100%;
+                height:300px;
+                background-color: red;
+            }
+            #modal{
+                text-align: center;
+                background: rgba(0, 0, 0, 0.4117647058823529);
+                max-width: 1000px;
+                margin: 0 auto;
+                padding: 3em;
+                border-radius: 10px;
+                box-sizing: border-box;
+            }
+            button {
+                background: #3366ff;
+                color: #ffffff;
+                font-size: 10px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                border: none;
+                padding: 12px 3px;
+                cursor: pointer;
+                width: 8%;
+                border-radius: 6px;
+            }
+            label {
+                font-weight: bold;
+                display: block;
+                text-transform: uppercase;
+                font-size: 23px;
+                color: #020202;
+                letter-spacing: 1px;
+                margin-bottom: 10px;
+                margin-left: 10px
+            }
+            .modal {
+                display: none; /* Hidden by default */
+                position: fixed; /* Stay in place */
+                z-index: 1; /* Sit on top */
+                padding-top: 100px; /* Location of the box */
+                left: 0;
+                top: 0;
+                width: 100%; /* Full width */
+                height: 100%; /* Full height */
+                overflow: auto; /* Enable scroll if needed */
+                background-color: rgb(0,0,0); /* Fallback color */
+                background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            }
+            .modal-content {
+                background-color: #fefefe;
+                margin: auto;
+                padding: 20px;
+                border: 1px solid #888;
+                width: 80%;
+            }
+            .close {
+                color: #aaaaaa;
+                
+                font-size: 12px;
+                font-weight: bold;
+            }
+            .close:hover,
+            .close:focus {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+            }
+            .modal-content{
+                text-align: center;
+                background: rgba(0,128,43,0.4117647058823529);
+                max-width: 1000px;
+                margin: 0 auto;
+                padding: 3em;
+                border-radius: 10px;
+                box-sizing: border-box;
+            }
+        </style>
+    </head>
+        <body>
+        <div>
+            <div id="banner"></div>
+            <div><button id="h_s" >Show</button></div>
+            <div><button id="h_b" >Hide</button></div>
+            <div><button id="d_b_i" >Toggle</button></div>
+            <div><button id="f_b_i" >Fade In</button></div>
+            <div><button id="f_b_o" >Fade Out</button></div>
+            <div><button id="s1_t" >FadeToggle</button></div>
+            <div><button id="s_u" >Slide Up</button></div>
+            <div><button id="s_d" >SlideDown</button></div>
+            <div><button id="s_t" >SlideToggle</button></div>
+        </div>
+        <br>
+        <br><br>  
+        <hr>
+        <label>Animation</label><br>
+        <img id="ta" src="car1.png" style="position:relative;"><br>
+        <button id="star">start</button>   
+        <button id="starb">stop</button><br><br>
+        <br><hr>
+        <div id="modal">
+            <h2>Modal</h2>
+            <button id="myBtn" style="margin-left: 420px">Open</button>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <h2>Modal</h2>
+                    <p>Some text in the Modal..</p>
+                    <button style="margin-left: 420px" class="close">Close</button>
+                </div>
+            </div>
+        </div>
+    </body>
+    
+    
+    <script>
+        
+      $(document).ready(function(){
+        $("#h_b").click(function(){
+            $("#banner").hide();
+        });
+        $("#h_s").click(function(){
+            $("#banner").show();
+        });
+        $("#f_b_i").click(function(){
+            $("#banner").fadeIn("slow");
+        });
+        $("#f_b_o").click(function(){
+            $("#banner").fadeOut("slow");
+        });
+        $("#s_u").click(function(){
+            $("#banner").slideUp("slow");
+        });
+        $("#s_d").click(function(){
+            $("#banner").slideDown("slow");
+        });
+        $("#s_t").click(function(){
+            $("#banner").slideToggle("slow");
+        });
+        $("#d_b_i").click(function(){
+            $("#banner").toggle("slow");
+        });
+        $("#s1_t").click(function(){
+            $("#banner").fadeToggle("slow");
+        });
+        $("#h_m_s").click(function(){
+            $("#b_s_f").fadeOut();
+            $("#b_s_f2").fadeOut();
+        });
+        $("#star").click(function(){
+          $("#ta").animate({left: "1100px"});
+        }); 
+        $("#starb").click(function(){
+            $("#ta").animate({left: "0px"});
+        });        
+
+        $('#myBtn').click(function() {
+              $('#myModal').css("display","block");
+          });
+        $(".close").click(function() {
+            $('#myModal').css("display","none");
+        });
+    });
+  </script>
+</html>
