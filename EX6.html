@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>WEBTECHLABEX6</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="EX6WEBJS.js"></script>
+    </head>
+    <body>
+        <div style="background-color: #cccccc; padding: 10px; color: #009900">
+            <h1 style="color: #3333ff">Text Processing</h1>
+            Enter the Message<br>
+            <textarea id="tt"></textarea><br>
+            <button style="background-color: #3333ff; color: white; border-color: #3333ff; padding-left: 15px; padding-right: 15px" onclick="cal()">Calculate</button>
+            <p id="pp"></p>
+        </div>
+        <hr>
+        <div style="padding: 10px;">
+            <h1>Flower Garden</h1>
+            Rows: <input type="number" min="0" id="r">
+            Columns: <input type="number" min="0" id="c"><br>
+            <button onclick="grow()">Plant Garden</button>
+            <div id="im"></div>
+        </div>
+        <hr>
+        <div style="background-color: #cccccc; padding: 10px">
+            <div id="d" style="float: right; width: 10em; height: 10em; background-color: #00ffff; text-align: center; overflow: hidden; border: 2px solid black"><p id="p1">Java Script Styles</p></div>
+            Change Background Color: <input type="color" id="bcolr" value="#00ffff" onchange="change(1,this.value)"><br><br>
+            Change Text Color: <input type="color" id="tcolr" value="#000000" onchange="change(2,this.value)"><br><br>
+            Text Size: 
+            <select onchange="change(3,this.value)" id="s1">
+                <option value="10">10</option>
+                <option value="12">12</option>
+                <option value="14">14</option>
+                <option value="16">16</option>
+                <option value="18">18</option>
+                <option value="20">20</option>
+                <option value="24">24</option>
+                <option value="28">28</option>
+                <option value="32">32</option>
+            </select><br><br>
+            Width: <input type="number" oninput="change(4,this.value)"><br><br>
+            Height: <input type="number" oninput="change(5,this.value)"><br><br>
+            Change Opacity: <input type="range" min="0" max="100" value="100" onchange="change(6,this.value)">
+        </div>
+        <hr>
+        <div>
+            <img src="car.jpg" width="200" height="200" id="mya"><br>
+            <button type="button" onclick="start()">Start</button>
+            <button type="button" onclick="stop()">Stop</button>
+        </div>
+        <hr>
+        <div style="padding-left: 10px; padding-right: 10px">
+            <div style="font-size: 40px; background-color: #33ccff; text-align: center">Banner</div>
+            <div id="dm" style="height: 700px; background-repeat: no-repeat; background-size: 100% 100%"></div>
+            <div style="font-size: 40px; background-color: #33ccff; text-align: center">Footer</div>
+        </div>
+    </body>
+</html>
