@@ -1,0 +1,33 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 30 Oct, 2018, 3:24:37 PM
+    Author     : ajayk
+*/
+
+University{
+  display: table;
+  width: 100%;
+}
+Employee{
+    display: table-row;
+}
+Uname{
+    display: block;
+    text-align: center;
+}
+people{
+    display: block;
+    text-align: center;
+    table-layout: 4;
+    display: table-row;
+}
+FirstName,LastName,Emp_Id,Gender,PhoneNo,Email,Address,Designation,Department,Salary{
+    display: table-cell;
+    width: 10%;
+    text-align: center;
+    border: 1px solid black;
+}

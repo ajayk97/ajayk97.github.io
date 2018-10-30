@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!--
+    TODO define vocabulary identification
+    PUBLIC ID: -//vendor//vocabulary//EN
+    SYSTEM ID: http://server/path/EX10WXML.dtd
+
+-->
+
+<!--
+    An example how to use this DTD from your XML document:
+
+    <?xml version="1.0"?>
+
+    <!DOCTYPE University SYSTEM "EX10WXML.dtd">
+
+    <University>
+    ...
+    </University>
+-->
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT University (Uname|people|Employee)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT Uname (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT people (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT Employee (FirstName|LastName|Emp_Id|Gender|PhoneNo|Email|Address|Designation|Department|Salary)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT FirstName (#PCDATA)>
+<!ATTLIST FirstName
+    class CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT LastName (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT Emp_Id (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT Gender (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT PhoneNo (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT Email (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT Address (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT Designation (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT Department (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT Salary (#PCDATA)>

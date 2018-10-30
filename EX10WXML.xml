@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="EX10WEBCSS.css"?>
+<!DOCTYPE University SYSTEM "EX10WXML.dtd">
+<University>
+    <Uname>University</Uname>
+    <people>Employee</people>
+    <Employee>
+        <FirstName class="d">Mathew</FirstName>
+        <LastName>Sachin</LastName>
+        <Emp_Id>234</Emp_Id>
+        <Gender>Male</Gender>
+        <PhoneNo>8986554433</PhoneNo>
+        <Email>john@gmail.com</Email>
+        <Address>Chennai</Address>
+        <Designation>Professor</Designation>
+        <Department>CSE</Department>
+        <Salary>640000</Salary>
+    </Employee>
+    <Employee>
+        <FirstName>Jacob</FirstName>
+        <LastName>Joy</LastName>
+        <Emp_Id>235</Emp_Id>
+        <Gender>Male</Gender>
+        <PhoneNo>8998354433</PhoneNo>
+        <Email>ryyhgvaj@gmail.com</Email>
+        <Address>Chennai</Address>
+        <Designation>Professor</Designation>
+        <Department>CSE</Department>
+        <Salary>560000</Salary>
+    </Employee>
+    <Employee>
+        <FirstName>Wilson</FirstName>
+        <LastName>David</LastName>
+        <Emp_Id>236</Emp_Id>
+        <Gender>Male</Gender>
+        <PhoneNo>8985674433</PhoneNo>
+        <Email>jtyohn@gmail.com</Email>
+        <Address>Chennai</Address>
+        <Designation>Professor</Designation>
+        <Department>CSE</Department>
+        <Salary>230000</Salary>
+    </Employee>
+    <Employee>
+        <FirstName class="d">John</FirstName>
+        <LastName>David</LastName>
+        <Emp_Id>237</Emp_Id>
+        <Gender>Male</Gender>
+        <PhoneNo>4536554433</PhoneNo>
+        <Email>johhhgtn@gmail.com</Email>
+        <Address>Chennai</Address>
+        <Designation>Professor</Designation>
+        <Department>CSE</Department>
+        <Salary>550000</Salary>
+    </Employee>
+    <Employee>
+        <FirstName class="d">Rohan</FirstName>
+        <LastName>Joseph</LastName>
+        <Emp_Id>238</Emp_Id>
+        <Gender>Male</Gender>
+        <PhoneNo>8986554433</PhoneNo>
+        <Email>john@gmail.com</Email>
+        <Address>Chennai</Address>
+        <Designation>Professor</Designation>
+        <Department>CSE</Department>
+        <Salary>340000</Salary>
+    </Employee>
+    <Employee>
+        <FirstName class="d">Kevin</FirstName>
+        <LastName>David</LastName>
+        <Emp_Id>239</Emp_Id>
+        <Gender>Male</Gender>
+        <PhoneNo>8986554433</PhoneNo>
+        <Email>john@gmail.com</Email>
+        <Address>Chennai</Address>
+        <Designation>Professor</Designation>
+        <Department>CSE</Department>
+        <Salary>360000</Salary>
+    </Employee>
+    <Employee>
+        <FirstName class="d">Jeremy Sam</FirstName>
+        <LastName>Joseph</LastName>
+        <Emp_Id>240</Emp_Id>
+        <Gender>Male</Gender>
+        <PhoneNo>8986554433</PhoneNo>
+        <Email>john@gmail.com</Email>
+        <Address>Chennai</Address>
+        <Designation>Professor</Designation>
+        <Department>CSE</Department>
+        <Salary>6830000</Salary>
+    </Employee>
+    <Employee>
+        <FirstName class="d">Ajay</FirstName>
+        <LastName>Kasthala</LastName>
+        <Emp_Id>241</Emp_Id>
+        <Gender>Male</Gender>
+        <PhoneNo>8986544099</PhoneNo>
+        <Email>ebhjohn@gmail.com</Email>
+        <Address>Chennai</Address>
+        <Designation>Professor</Designation>
+        <Department>CSE</Department>
+        <Salary>650000</Salary>
+    </Employee>
+</University>
