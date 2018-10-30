@@ -1,0 +1,224 @@
+<html>
+    <head>
+        <title>WEBTECHLABEX5</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function calc(y)
+            {
+                var x =""+ document.getElementById('i1').value + y + document.getElementById('i2').value;
+                document.getElementById('i3').value = eval(x);
+            }
+            function clea(){
+                document.getElementById('i1').value = "";
+                document.getElementById('i2').value = "";
+                document.getElementById('i3').value = "";
+            }
+            function bmi(){
+                var x = document.getElementById('i4').value;
+                var y = document.getElementById('i5').value;
+                if(x<0){
+                    document.getElementById('i4').value = 0;
+                }
+                if(y<0)   
+                    document.getElementById('i5').value = 0;
+                if(x==""||y<51||y=="")
+                    document.getElementById('dd').innerHTML = "";
+                else{
+                    y/=100;
+                    var b = x/(y*y);
+                    var info;
+                    if(b<18)
+                        info = "Underweight BMI";
+                    else if(b>17&&b<25)
+                        info = "Normal BMI";
+                    else if(b>24&&b<30)
+                        info = "Overweight BMI";
+                    else
+                        info = "Obese BMI";
+                document.getElementById('dd').innerHTML = b.toFixed(1)+"<br>"+info;
+                }  
+            }
+            function con(){
+                var i = document.getElementById('s1').selectedIndex;
+                var x = document.getElementById('s1').options[i].value;
+                
+                var j = document.getElementById('s2').selectedIndex;
+                var y = document.getElementById('s2').options[j].value;
+                var num = document.getElementById('i6').value;
+                if(i==1){
+                    switch(j){
+                        case 1: c1=num;
+                            break;
+                        case 2: c1=num*74.27;
+                            break;
+                        case 3: c1=num*0.30;
+                            break;
+                        case 4: c1=num*0.87;
+                            break;
+                        case 5: c1=num*1.41;
+                    }
+                }
+                else if(i==2){
+                    switch(j){
+                        case 1: c1=num*0.013;
+                            break;
+                        case 2: c1=num;
+                            break;
+                        case 3: c1=num*0.0041;
+                            break;
+                        case 4: c1=num*0.012;
+                            break;
+                        case 5: c1=num*0.019;
+                    }
+                }
+                else if(i==3){
+                    switch(j){
+                        case 1: c1=num*3.29;
+                            break;
+                        case 2: c1=num*244.66;
+                            break;
+                        case 3: c1=num;
+                            break;
+                        case 4: c1=num*2.86;
+                            break;
+                        case 5: c1=num*4.64;
+                    }
+                }
+                else if(i==4){
+                    switch(j){
+                        case 1: c1=num*1.15;
+                            break;
+                        case 2: c1=num*85.62;
+                            break;
+                        case 3: c1=num*0.35;
+                            break;
+                        case 4: c1=num;
+                            break;
+                        case 5: c1=num*1.63;
+                    }
+                }
+                else if(i==5){
+                    switch(j){
+                        case 1: c1=num*0.71;
+                            break;
+                        case 2: c1=num*52.69;
+                            break;
+                        case 3: c1=num*0.22;
+                            break;
+                        case 4: c1=num*0.62;
+                            break;
+                        case 5: c1=num;
+                    }
+                }
+                document.getElementById('va').innerHTML = c1.toFixed(2);
+            }
+            function cl(i){
+                document.getElementById('t').innerHTML+=i;
+            }
+            function cal(){
+                var text = document.getElementById('t').value;
+                document.getElementById('t').innerHTML=eval(text);
+            }
+            function clean2(){
+                document.getElementById('t').innerHTML="";
+            }
+            function del(){
+                var text = document.getElementById('t').value;
+                document.getElementById('t').innerHTML = text.substr(0,text.length-1);
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <table>
+                <tr>
+                    <td colspan="4"><h3>Simple Calculator</h3></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="text" placeholder="NUMBER e.g. 12345" id="i1">
+                    </td>
+                    <td colspan="2">
+                        <input type="text" placeholder="NUMBER e.g. 54321" id="i2">
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="+ADD" onclick="calc('+')"></td>
+                    <td><input type="button" value="-SUBTRACT" onclick="calc('-')"></td>
+                    <td><input type="button" value="*MULTIPLY" onclick="calc('*')"></td>
+                    <td><input type="button" value="/DIVIDE" onclick="calc('/')"></td>
+                </tr>
+                <tr>
+                    <td colspan="3"><input type="text" placeholder="Result" id="i3"></td>
+                    <td ><input type="button" value="Clear" onclick="clea()"></td>
+                </tr>
+            </table>
+            
+        </div>
+        <hr>
+        <div>
+            <div><h3>Body Mass Index(BMI)</h3>
+                A measure of body fat in adults
+            </div>
+            <div>
+                <div>
+                    Weight:<br>
+                    <input type="text" placeholder="weight" id="i4" oninput="bmi()">Kg<br>
+                    Height:<br>
+                    <input type="text" placeholder="height" id="i5" oninput="bmi()">cm<br>
+                </div>
+                <div id="dd"></div>
+            </div>
+        </div>
+        <hr>
+        <div>
+            <div><h3>Currency Converter</h3></div>
+            <div>
+                Input<br>
+                <input type="text" placeholder="Enter a value" id="i6" oninput="con()"><br>
+                From<br>
+                <select onchange="con()" id="s1">
+                    <option>-Select-</option>
+                    <option value="1">USD</option>
+                    <option value="2">INR</option>
+                    <option value="3">KD</option>
+                    <option value="4">EURO</option>
+                    <option value="5">AD</option>
+                </select><br>
+                To<br>
+                <select onchange="con()" id="s2">
+                    <option>-Select-</option>
+                    <option value="1">USD</option>
+                    <option value="2">INR</option>
+                    <option value="3">KD</option>
+                    <option value="4">EURO</option>
+                    <option value="5">AD</option>
+                </select>
+                <div id="va"></div>
+            </div>
+        </div>
+        <hr>
+        <div>
+            <textarea id="t"></textarea><br>
+            <button onclick="cl(this.value)" value=1>1</button>
+            <button onclick="cl(this.value)" value=2>2</button>
+            <button onclick="cl(this.value)" value=3>3</button>
+            <button onclick="cl(this.value)" value=4>4</button><br>
+            <button onclick="cl(this.value)" value=5>5</button>
+            <button onclick="cl(this.value)" value=6>6</button>
+            <button onclick="cl(this.value)" value=7>7</button>
+            <button onclick="cl(this.value)" value=8>8</button><br>
+            <button onclick="cl(this.value)" value=9>9</button>
+            <button onclick="cl(this.value)" value=0>0</button>
+            <button onclick="cl(this.value)" value=.>.</button>
+            <button onclick="cl(this.value)" value=+>+</button><br>
+            <button onclick="cl(this.value)" value=->-</button>
+            <button onclick="cl(this.value)" value=/>/</button>
+            <button onclick="cl(this.value)" value=.>*</button>
+            <button onclick="cal()">=</button><br>
+            <button onclick="clean2()">Reset</button>
+            <button onclick="del()">Delete</button>
+        </div>
+    </body>
+</html>
